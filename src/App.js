@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Headercomponent from './Headercomponent'
+import Tablecomponent from './Tablecomponent';
 
 class App extends Component {
     constructor(props) {
@@ -16,7 +16,7 @@ class App extends Component {
         }
         return (
             <div className="App">
-                <Headercomponent compareSummary={data.compareSummary} />
+                <Tablecomponent data={data} />
             </div>
         );
     }
