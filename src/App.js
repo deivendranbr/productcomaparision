@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Tablecomponent from './Tablecomponent';
+import inputdata from './input';
 
 class App extends Component {
     constructor(props) {
@@ -10,7 +11,8 @@ class App extends Component {
     }
     
     render() {
-        const { data } = this.state;
+        // const { data } = this.state;
+        const data = inputdata.products;
         if (!data){
             return <div>Loading...</div>
         }
@@ -21,11 +23,11 @@ class App extends Component {
         );
     }
 
-    componentDidMount() {
-        fetch('https://api.myjson.com/bins/fwwg4')
-        .then(res => res.json())
-        .then(result => this.setState({ data: result.products }))
-    }
+    // componentDidMount() {
+    //     fetch('http://www.mocky.io/v2/5e86ec5531000011d8814754')
+    //     .then(res => res.json())
+    //     .then(result => this.setState({ data: result.products }))
+    // }
 }
 
 export default App;

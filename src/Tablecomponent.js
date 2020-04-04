@@ -4,7 +4,10 @@ import Rowcomponent from './Rowcomponent';
 
 function Tablecomponent(props) {
 	const [selectedCount, setSelectedCount] = useState(0);
+	const [primary, setPrimary] = useState(null);
+	const [secondary, setSecondary] = useState(null);
 	const featuresList = props.data.featuresList;
+
 	return (
 		<table>
 			<tr>
@@ -12,8 +15,18 @@ function Tablecomponent(props) {
 			    	<h4>Compare</h4>
 			    	<p>{selectedCount} item selected</p>
 			    </th>
-			    <th><Headercomponent compareSummary={props.data.compareSummary} /></th>
-			    <th><Headercomponent compareSummary={props.data.compareSummary} /></th>
+			    <th>
+			    	<Headercomponent 
+			    		compareSummary={props.data.compareSummary} 
+			    		setValue={ (value) => setPrimary(value) }
+		    		/>
+			    </th>
+			    <th>
+			    	<Headercomponent 
+			    		compareSummary={props.data.compareSummary} 
+			    		setValue={ (value) => setSecondary(value) } 
+		    		/>
+		    	</th>
 			</tr>
 			{
 				featuresList.map(data => {
