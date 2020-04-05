@@ -1,0 +1,12 @@
+table {
+	margin: 0 auto;
+}
+
+table td {
+	padding: 0.5em;
+	border-right: 1px solid #eeeeee;
+}
+
+.feature-title {
+	background-color: #e6e2e2;
+}
