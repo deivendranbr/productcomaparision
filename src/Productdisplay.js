@@ -14,10 +14,17 @@ function Productdisplay(props) {
 			backgroundColor: 'white'
 		}
 	}
+	debugger;
 	return (
 		<div>
 			<div style={styles.div}><button style={styles.button} onClick={() => props.onClose()}>x</button></div>
 			<img src={props.imageurl} width={200} height={150} alt="Product" />
+			<div>{props.title.title}</div>
+			<div>
+				<span>{props.pricesummary.finalPrice}</span>
+				<span>{props.pricesummary.finalPrice}</span>
+				<span>{props.pricesummary.totalDiscount}</span>
+			</div>
 		</div>
 	)
 }

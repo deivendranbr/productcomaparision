@@ -9,7 +9,7 @@ function Headercomponent(props) {
 	const titles = props.compareSummary.titles;
 	return (
 		<div>
-			<div style={{width: '200px', height: '150px', backgroundColor:'#eeeeee'}}></div>
+			<div style={{width: '200px', height: '150px', backgroundColor:'#eeeeee', margin: '0 auto'}}></div>
 			<h2>Add a product</h2>
 			<select value={productName} onChange={e => handleProductChange(e)}>
 				<option value=''>Choose a Product</option>
